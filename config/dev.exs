@@ -16,7 +16,8 @@ config :svelte_phoenix, SveltePhoenixWeb.Endpoint,
   secret_key_base: "TOq07CpuZS8L6k3/Zxu//b1hiV0vun/DBgRO2h4iKPXpdb7V8wov01MYzaxU3aRu",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    # esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    node: ["build.js", "--watch", cd: Path.expand("../assets", __DIR__)]
   ]
 
 # ## SSL Support
