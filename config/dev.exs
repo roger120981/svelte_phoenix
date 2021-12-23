@@ -15,10 +15,8 @@ config :svelte_phoenix, SveltePhoenixWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "TOq07CpuZS8L6k3/Zxu//b1hiV0vun/DBgRO2h4iKPXpdb7V8wov01MYzaxU3aRu",
   watchers: [
-    # This is for windows 10 environments 
-    cmd: [
-	  "/c",
-	  "npx",
+    # This is for linux environments 
+    npx: [
       "tailwindcss",
       "--input=css/app.css",
       "--output=../priv/static/assets/app.css",
