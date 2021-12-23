@@ -2,10 +2,4 @@
   console.log("test");
 </script>
 
-<style>
-  h1 {
-    color: red;
-  }
-</style>
-
-<h1>This is the svelte component</h1>
+<h1 class="text-red-500 text-5xl font-bold text-center">Tailwind CSS 4444</h1>

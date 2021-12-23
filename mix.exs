@@ -57,7 +57,7 @@ defmodule SveltePhoenix.MixProject do
   defp aliases do
     [
       setup: ["deps.get", "ecto.setup", "cmd --cd assets npm install"],
-      "assets.deploy": ["cmd --cd assets node build.js --deploy", "phx.digest"]
+      "assets.deploy": ["cmd --cd assets npm run build && npm run deploy", "phx.digest"]
     ]
   end
 end

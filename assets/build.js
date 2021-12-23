@@ -1,5 +1,5 @@
-import esbuild  from "esbuild"
-import sveltePlugin from "esbuild-svelte"
+const esbuild = require("esbuild")
+const sveltePlugin = require("esbuild-svelte")
 
 
 const args = process.argv.slice(2)
