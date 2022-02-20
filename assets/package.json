@@ -4,11 +4,12 @@
     "build": "node build.js --deploy"
   },
   "dependencies": {
-	"esbuild": "^0.14.8",
+    "esbuild": "^0.14.8",
     "esbuild-svelte": "^0.5.7",
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
-    "phoenix_live_view": "file:../deps/phoenix_live_view"
+    "phoenix_live_view": "file:../deps/phoenix_live_view",
+    "svelte-preprocess": "^4.10.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",

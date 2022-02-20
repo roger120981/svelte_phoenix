@@ -1,6 +1,6 @@
 const esbuild = require("esbuild")
 const sveltePlugin = require("esbuild-svelte")
-
+const sveltePreprocess = require("svelte-preprocess");
 
 const args = process.argv.slice(2)
 const watch = args.includes('--watch')
@@ -13,7 +13,16 @@ let opts = {
   outdir: '../priv/static/assets',
   logLevel: 'info',
   plugins: [
-    sveltePlugin()
+    sveltePlugin({
+        preprocess: sveltePreprocess({
+			postcss: {
+				plugins: [
+					require("tailwindcss"), 
+					require("autoprefixer"),
+				],
+			},
+		}),
+      })
   ]
 }
 
